@@ -1,37 +1,38 @@
 <div id="challenge-desc" class="challenge">
   <h2>今回の課題:</h2>
-  <p>Git をあなたのコンピュータにインストールして、あなたのメールアドレスを設定しましょう</p>
+  <p>Git をあなたのコンピュータにインストールして、あなたの名前とメールアドレスを設定しましょう</p>
 </div>
 
 <h2>Git</h2>
 
-<p>Git は Linux オペレーティングシステムを開発した Linus Torvalds の書いた<strong>オープンソースソフトウェア</strong> (誰もが自由に使えるソフトウェア) です。</p>
-<p>このプログラムはファイルの時間の経過にともなう内容の変更を管理できるようにするもので
-  このようなプログラムは<string>バージョンコントロール</string>と呼ばれています。</p>
+<p>Git は Linux の開発者である Linus Torvalds さん開発した<strong>オープンソースソフトウェア</strong> (誰もが自由に使えるソフトウェア) です。</p>
+<p>Git はファイルの変更点を時系列と共に管理できるようにするもので、このようなプログラムは<string>バージョンコントロール</string>プログラムと呼ばれています。</p>
 
 <h2>手順: Gitのインストール</h2>
 
 <ul>
-  <li><strong>Windows</strong>の場合: GitHub Desktopをダウンロードしてインストールするのがお勧めです。
-    Git が含まれていて、インストールも簡単です:
-  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. <strong>Git Shell</strong> をターミナルとして使います。</li>
+  <li><strong>Windows</strong>の場合:<br>
+    GitHub Desktop をダウンロードしてインストールするのがお勧めです。Git 本体も含まれていて、インストールが簡単です。
+    <nobr>→ <a href="http://desktop.github.com" target="_blank">desktop.github.com</a></nobr><br>
+    <strong>Git Shell</strong> を端末として使います。</li>
 
-  <li><strong>Mac</strong>の場合: Macの場合でも GitHub Desktop がお勧めなのは同じです。Git 含まれています。
-    <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (インストール後にPreferencesの中からコマンドラインツールをインストールすることができます)。または、
-    <ul>
-      <li>こちらから Git のみをダウンロードすることができます:
-      <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> のインストール説明を参照してください。</li>
+  <li><strong>MacOS</strong>の場合:<br>
+    Macの場合でも同様に GitHub Desktop がお勧めです。Git 本体も含まれています。
+    <nobr>→ <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a></nobr> (インストール後にPreferencesの中からコマンドラインツールをインストールすることができます)。<br>
+    または、Git 本体のみをダウンロード・インストールすることもできます。
+    <nobr>→ <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a></nobr> 詳細はリンク先のインストール説明を参照してください。</li>
     </ul>
   </li>
 </ul>
 
-<p>Git isn't like other programs on your computer. You'll likely not
-see an icon on your desktop, but it will always be available to you
-and you'll be able to access it at anytime from your
-terminal (which you're using in Git-it!) or Git desktop applications (like GitHub Desktop).</p>
+<p>Git はあなたのコンピュータにインストールされている他のプログラムとはちょっと毛色が違います。
+  デスクトップ上にはアイコンは表示されませんが、コンピュータ内にはちゃんとあって、
+  いつでも端末(ターミナル)プログラムや GitHub desktop のような Git desktop アプリケーションからアクセスすることができます。
+</p>
 
-<h2>Step: Configure Git</h2>
-<p>Once it is installed, open <strong>terminal</strong> (aka Bash, aka Shell, aka Prompt).
+<h2>手順: Git の設定</h2>
+<p>インストールが終ったら (Bash や Shell や Prompt のような)<strong>端末(ターミナル)</strong> を開いてください。
+  
 You can verify that it's really there by typing:</p>
 
 <p><code>$ git --version </code></p>
