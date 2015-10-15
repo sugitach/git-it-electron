@@ -19,22 +19,22 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="branches_arent_just_for_birds.html"
+    <a href="requesting_you_pull_please.html"
       <span class="hand">☜</span>
     </a>
-    <a href="pull_never_out_of_date.html"
+    <a href="../index-ja.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">merge tada</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -90,7 +90,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -108,7 +108,7 @@
         </a>
       </li>
       <li>
-        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item">
+        <a id="merge_tada" data-id="10" href="merge_tada.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           merge tada
         </a>
@@ -119,51 +119,88 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Add a collaborator to your project.</p>
-</div>
+  <p>Merge your branch locally, delete old branch and pull from upstream for much win!</p>
+ </div>
 
-<h2>Social Coding</h2>
+<h2>Step: Merge Locally</h2>
 
-<p>Working with others is one of the best things about GitHub because
-  it makes it easy to work from all over the world at any time.</p>
+<p>Your pull request has been merged! Now, since you
+  know that you definitely want those updates in your forked version,
+  and your branch is in good working order, merge it into the main
+  branch on your forked repository, in this case, &apos;gh-pages&apos;.</p>
 
-<p><strong>Collaborators</strong> are other GitHub users who are given permission to
-  make edits to a repository owned by someone else. To add
-  collaborators to a project, visit the repository's GitHub page
-  and click the 'Settings' icon on the right side menu. Then select the
-  'Collaborators' tab. Type in the username to add and click 'Add'.</p>
+<p>First, move into the branch you want to merge <em>into</em> &#x2014; in this case,
+  branch &apos;gh-pages&apos;.</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<p><code>$ git checkout gh-pages</code></p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>Go to the your forked Patchwork repository's page on GitHub and
-  add 'reporobot' as a collaborator. The URL should look like this, but with your username.</p>
+<p>Now tell Git what branch you want to merge <em>in</em> &#x2014; in this case,
+  your feature branch that begins with &quot;add-&quot;.</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<p><code>$ git merge &lt;BRANCHNAME&gt;</code></p>
+
+<p>Tidy up by deleting your feature branch now that it has been merged.</p>
+<p><code>$ git branch -d &lt;BRANCHNAME&gt;</code></p>
+
+<p>You can also delete the branch from your fork on GitHub:</p>
+<p><code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code></p>
+
+<h2>Step: Pull from Upstream</h2>
+<p>And last but not least, if you pull in updates from the original
+  (since it now shows you on the home page) you&apos;ll be up to date
+  and have a version too, live at: yourusername.github.io/patchwork.</p>
+
+<p>To pull from the original upstream:</p>
+
+<p><code>$ git pull upstream gh-pages</code></p>
+
+<h2>Congratulations!</h2>
+<p>You&apos;ve created local repositories, remote repositories, worked with
+  a collaborator, pushed, pulled and joined the millions of others
+  developing and enriching open source!</p>
+<p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name incorporated!</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div id="git-tips">
+  <h2>Tips</h2>
+  <ul>
+    <li><strong>Merge a branch into current branch</strong></li>
+    <code>$ git merge &lt;BRANCHNAME&gt;</code>
+    <li><strong>Change the branch you&apos;re working on</strong></li>
+    <code>$ git checkout &lt;BRANCHNAME&gt;</code>
+    <li><strong>Delete a local branch</strong></li>
+    <code>$ git branch -d &lt;BRANCHNAME&gt;</code>
+    <li><strong>Delete a remote branch</strong></li>
+    <code>$ git push &lt;REMOTENAME&gt; --delete &lt;BRANCHNAME&gt;</code>
+    <li><strong>Pull from a remote branch</strong></li>
+    <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
+  </ul>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="requesting_you_pull_please.html" class="u-inline-block all-caps">requesting you pull please
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="../index-ja.html" class="u-inlineBlock all-caps">Done!
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
@@ -177,7 +214,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'merge_tada'
       challengeStatus.completed(currentChallenge)
     </script>
 

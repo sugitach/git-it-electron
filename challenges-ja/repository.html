@@ -19,22 +19,22 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="branches_arent_just_for_birds.html"
+    <a href="get_git.html"
       <span class="hand">☜</span>
     </a>
-    <a href="pull_never_out_of_date.html"
+    <a href="commit_to_it.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">repository</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -54,7 +54,7 @@
         </a>
       </li>
       <li>
-        <a id="repository" data-id="1" href="repository.html" class="challenge-item">
+        <a id="repository" data-id="1" href="repository.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           repository
         </a>
@@ -90,7 +90,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -119,51 +119,87 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Add a collaborator to your project.</p>
+  <p>Create a new repository on your computer.</p>
 </div>
 
-<h2>Social Coding</h2>
+<h2>Repositories</h2>
 
-<p>Working with others is one of the best things about GitHub because
-  it makes it easy to work from all over the world at any time.</p>
+<p>A <strong>repository</strong> is essentially a project. You can imagine it
+  as a project&apos;s folder with all the related files inside of it. In
+  fact, that&apos;s what it will look like on your computer anyways.</p>
 
-<p><strong>Collaborators</strong> are other GitHub users who are given permission to
-  make edits to a repository owned by someone else. To add
-  collaborators to a project, visit the repository's GitHub page
-  and click the 'Settings' icon on the right side menu. Then select the
-  'Collaborators' tab. Type in the username to add and click 'Add'.</p>
+<img src="../assets/imgs/repos.png" width="600">
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<p>You tell Git what your project is and Git will start tracking all
+  of the changes to that folder. Files added or subtracted or even
+  a single letter in a single file changed -- all of it&apos;s tracked and
+  time stamped by Git. That&apos;s <strong>version control</strong>.</p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>Go to the your forked Patchwork repository's page on GitHub and
-  add 'reporobot' as a collaborator. The URL should look like this, but with your username.</p>
+<h2>Using Terminal</h2>
+<p><strong>Terminal</strong> (or Bash) is a way of using your computer by just typing commands. You can rename files, open files, create new folders, and move between directories (folders) all by typing out commands. You can even run a text editor (such as <a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"> Vim</a>) in your terminal and never have to leave!</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<p>Besides navigating your computer, you can also use programs in Terminal that have a <strong>command-line interface (CLI)</strong>, meaning they can be run with commands in terminal. Git-it is one, you&apos;re using terminal to use it! Git is another. You can access and control Git through commands in terminal, as you&apos;ll be doing very soon!</p>
+
+<p>In Git-it you&apos;ll learn a few basic command line actions which will be described within the steps.</p>
+
+<h2>Step: Create a Repository</h2>
+<p>You&apos;re going to create a new folder and initialize it as a Git
+  repository.</p>
+
+<p>To make things easier, name your folder what you&apos;d name the project. How about &apos;hello-world&apos;.</p>
+
+<p>You can type these commands one at a time into your terminal window.</p>
+
+<p>To make a new folder:</p>
+<code>$ mkdir hello-world</code>
+
+<p>To go into that folder:</p>
+<code>$ cd hello-world</code>
+
+<p>To create a new Git instance for a project:</p>
+<code>$ git init</code>
+
+<p>That&apos;s it! It will just return you to a new line. If you want to be double-sure that it&apos;s a Git repository, type <code>git status</code> and if it doesn&apos;t return &apos;fatal: Not a git repository...&apos;, you&apos;re golden!</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div id="git-tips">
+  <h2>Tips</h2>
+  <ul>
+    <li><strong>Make a new folder (aka directory)</strong></li>
+    <code>$ mkdir &lt;FOLDERNAME&gt;</code>
+    <li><strong>Navigate into an existing folder (aka change directory)</strong></li>
+    <code>$ cd &lt;FOLDERNAME&gt;</code>
+    <li><strong>List the items in a folder</strong></li>
+    <code>$ ls </code>
+    <li><strong>Turn Git on for a folder</strong></li>
+    <code>$ git init</code>
+  </ul>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="get_git.html" class="u-inline-block all-caps">get git
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="commit_to_it.html" class="u-inlineBlock all-caps">commit to it
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
@@ -177,7 +213,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'repository'
       challengeStatus.completed(currentChallenge)
     </script>
 

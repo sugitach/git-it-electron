@@ -19,22 +19,22 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="branches_arent_just_for_birds.html"
+    <a href="commit_to_it.html"
       <span class="hand">☜</span>
     </a>
-    <a href="pull_never_out_of_date.html"
+    <a href="remote_control.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">GitHubbin</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -66,7 +66,7 @@
         </a>
       </li>
       <li>
-        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item">
+        <a id="githubbin" data-id="3" href="githubbin.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           GitHubbin
         </a>
@@ -90,7 +90,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -119,51 +119,63 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Add a collaborator to your project.</p>
+  <p>Create a GitHub account, add username to your Git config.</p>
 </div>
 
-<h2>Social Coding</h2>
+<h2>Better, together</h2>
 
-<p>Working with others is one of the best things about GitHub because
-  it makes it easy to work from all over the world at any time.</p>
+<p>The repository you&apos;ve created so far is just on your computer, which
+  is handy, but makes it pretty hard to share and work with others on.
+  No worries, that&apos;s what GitHub is for!</p>
 
-<p><strong>Collaborators</strong> are other GitHub users who are given permission to
-  make edits to a repository owned by someone else. To add
-  collaborators to a project, visit the repository's GitHub page
-  and click the 'Settings' icon on the right side menu. Then select the
-  'Collaborators' tab. Type in the username to add and click 'Add'.</p>
+<h2>Step: Create a GitHub Account</h2>
+<p>GitHub is a website that allows people everywhere to upload what
+  they&apos;re working on with Git and to easily work together.</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<p>Visit <a href="http://github.com" target="_blank">github.com</a> and sign up for a free account.
+<strong>High five, welcome!</strong></p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>Go to the your forked Patchwork repository's page on GitHub and
-  add 'reporobot' as a collaborator. The URL should look like this, but with your username.</p>
+<h2>Step: Add username to Git</h2>
+<p>Add your GitHub username to your Git configuration,
+which will be needed in order to verify the upcoming challenges. Save it exactly as you created it on GitHub &#x2014; <strong>capitalize where capitalized</strong>, and remember you don&apos;t need to enter the &quot;&lt;&quot; and &quot;&gt;&quot; .</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<p>Add your GitHub username to your configuration:</p>
+
+<code>$ git config --global user.username &lt;USerNamE&gt;</code>
+<br><br>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div class="didnt-pass">
+  <h2>Didn&apos;t Pass?</h2>
+
+  <h4>GitHub &amp; Git config usernames do not match</h4>
+  <p>A common error is not having your GitHub username match the case of the one you set with <code>git config</code>. For instance, &apos;JLord&apos; isn&apos;t the same as &apos;jlord&apos;</p>
+  <p>To change your username set with Git, just do the same command you did earlier, but with the correct capitalization:</p>
+  <p><code>$ git config --global user.username &lt;USerNamE&gt;</code></p>
+  <p>When you&apos;ve made your updates, verify again!</p>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="commit_to_it.html" class="u-inline-block all-caps">commit to it
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="remote_control.html" class="u-inlineBlock all-caps">remote control
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
@@ -177,7 +189,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'githubbin'
       challengeStatus.completed(currentChallenge)
     </script>
 

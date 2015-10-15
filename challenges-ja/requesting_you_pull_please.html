@@ -19,22 +19,22 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="branches_arent_just_for_birds.html"
+    <a href="pull_never_out_of_date.html"
       <span class="hand">☜</span>
     </a>
-    <a href="pull_never_out_of_date.html"
+    <a href="merge_tada.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">requesting you pull please</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -90,7 +90,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -102,7 +102,7 @@
         </a>
       </li>
       <li>
-        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item">
+        <a id="requesting_you_pull_please" data-id="9" href="requesting_you_pull_please.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           requesting you pull please
         </a>
@@ -119,31 +119,63 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Add a collaborator to your project.</p>
+  <p>Submit a Pull Request on the original Patchwork repository.</p>
 </div>
 
-<h2>Social Coding</h2>
+<h2>Pull Requests</h2>
 
-<p>Working with others is one of the best things about GitHub because
-  it makes it easy to work from all over the world at any time.</p>
+<p>When you make changes and improvements to a project you&apos;ve forked,
+  often you&apos;ll want to send
+  those changes to the maintainer of the original and <strong>request</strong> that
+  they <strong>pull</strong> the changes into the original so that everyone can
+  benefit from the updates - that&apos;s a <strong>pull request</strong>.</p>
 
-<p><strong>Collaborators</strong> are other GitHub users who are given permission to
-  make edits to a repository owned by someone else. To add
-  collaborators to a project, visit the repository's GitHub page
-  and click the 'Settings' icon on the right side menu. Then select the
-  'Collaborators' tab. Type in the username to add and click 'Add'.</p>
+<p>We want to add you to the list of workshop finishers, so make
+  a <strong>pull request</strong> to the original: <a href="https://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>.</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<img src="../assets/imgs/pullrequest.png" width="600">
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>Go to the your forked Patchwork repository's page on GitHub and
-  add 'reporobot' as a collaborator. The URL should look like this, but with your username.</p>
+<h2>Step: Create a pull request</h2>
+<p>Visit the original repository you forked on GitHub, in this case
+<a href="https://github.com/jlord/patchwork">http://github.com/jlord/patchwork</a>.</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<p>Often GitHub will detect if you&apos;ve pushed a branch to a fork and
+display it at the top of the original&apos;s website. If you see that with your &apos;add-username&apos; branch,
+you can click Create Pull Request from there. If not:</p>
+
+<ul>
+  <li>Click &apos;Pull request&apos; on the right-side menu, then &apos;New pull request&apos;.</li>
+  <li>Select the branch with the changes you want to submit. <strong>It should be
+the one with &apos;add-yourusername&apos;</strong>.</li>
+</ul>
+
+<p>You&apos;ll now see a page with the details of the pull request you&apos;re
+in the process of submitting. The page shows the commits and changes
+associated with your pull request as compared to the &apos;gh-pages&apos; branch of the original.</p>
+
+<p>If the original repository has a
+<strong>contribution documentation</strong>, GitHub will link to it. This is documentation from repository owners on how to best make contributions to that project. </p>
+
+<p>If everything is good, and as you expect it:</p>
+
+<ul>
+  <li>Click &apos;Create pull request&apos;</li>
+  <li>Add a title and description to the changes you&apos;re suggesting the
+  original author pull in.</li>
+  <li>Click &apos;Send pull request&apos;!</li>
+</ul>
+
+<p><strong>High five! You&apos;ve submitted your pull request, take a few
+seconds to bask in the moment.</strong>
+
+</p><p>If all is well with your pull request, it will be merged within moments. If it&apos;s not merged automatically within a few moments, you&apos;ll then
+likely have some comments from Reporobot on why it couldn&apos;t merge
+it. If so, close your pull request on GitHub, make the necessary
+changes to your branch, push those changes and resubmit your pull
+request.</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
@@ -151,19 +183,19 @@
 
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="pull_never_out_of_date.html" class="u-inline-block all-caps">pull never out of date
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="merge_tada.html" class="u-inlineBlock all-caps">merge tada
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
@@ -177,7 +209,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'requesting_you_pull_please'
       challengeStatus.completed(currentChallenge)
     </script>
 

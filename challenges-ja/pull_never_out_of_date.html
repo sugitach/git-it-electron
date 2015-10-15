@@ -19,22 +19,22 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="branches_arent_just_for_birds.html"
+    <a href="its_a_small_world.html"
       <span class="hand">☜</span>
     </a>
-    <a href="pull_never_out_of_date.html"
+    <a href="requesting_you_pull_please.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">pull never out of date</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -90,13 +90,13 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
       </li>
       <li>
-        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item">
+        <a id="pull_never_out_of_date" data-id="8" href="pull_never_out_of_date.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           pull never out of date
         </a>
@@ -119,51 +119,67 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Add a collaborator to your project.</p>
+  <p>Keep your file up to date by pulling in changes from collaborators.</p>
 </div>
 
-<h2>Social Coding</h2>
+<h2>Pulling from a Remote</h2>
+<p>If you&apos;re working on something with someone you need to stay up
+  to date with the latest state. So you&apos;ll want to <strong>pull</strong> in any
+  changes that may have been made.</p>
 
-<p>Working with others is one of the best things about GitHub because
-  it makes it easy to work from all over the world at any time.</p>
+<img src="../assets/imgs/pull.png" width="600">
 
-<p><strong>Collaborators</strong> are other GitHub users who are given permission to
-  make edits to a repository owned by someone else. To add
-  collaborators to a project, visit the repository's GitHub page
-  and click the 'Settings' icon on the right side menu. Then select the
-  'Collaborators' tab. Type in the username to add and click 'Add'.</p>
+<h2>Step: What has Reporobot been up to?</h2>
+<p>See if Reporobot has made any changes to your &apos;add-&apos; branch by pulling
+  in from the remote named &apos;origin&apos; on GitHub:</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<p><code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>Go to the your forked Patchwork repository's page on GitHub and
-  add 'reporobot' as a collaborator. The URL should look like this, but with your username.</p>
+<p>If nothing&apos;s changed, it will tell you &apos;Already up-to-date&apos;.
+  If there are changes, it will merge those changes into your local
+  version.</p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<p>Did Reporobot make changes? Git tells you where changes were made.
+  You can open that file and see Reporobot&apos;s updates. Surprise,
+  Reporobot is an artist!</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div id="git-tips">
+  <h2>TIPS</h2>
+    <ul>
+    <li><strong>Check Git status</strong></li>
+    <code>$ git status</code>
+    <li><strong>Pull in changes from a remote branch</strong></li>
+    <code>$ git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
+    <li><strong>See changes to the remote before you pull in</strong></li>
+    <code>$ git fetch --dry-run</code>
+  </ul>
+</div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="its_a_small_world.html" class="u-inline-block all-caps">it&#x27;s a small world
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="requesting_you_pull_please.html" class="u-inlineBlock all-caps">requesting you pull please
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
@@ -177,7 +193,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'pull_never_out_of_date'
       challengeStatus.completed(currentChallenge)
     </script>
 

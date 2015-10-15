@@ -19,22 +19,22 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="branches_arent_just_for_birds.html"
+    <a href="repository.html"
       <span class="hand">☜</span>
     </a>
-    <a href="pull_never_out_of_date.html"
+    <a href="githubbin.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
-  <span class="challenge-title">it&#x27;s a small world</span>
+  <span class="challenge-title">commit to it</span>
 </header>
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -60,7 +60,7 @@
         </a>
       </li>
       <li>
-        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item">
+        <a id="commit_to_it" data-id="2" href="commit_to_it.html" class="challenge-item current">
           <div class="current-arrow">▶️</div>
           commit to it
         </a>
@@ -90,7 +90,7 @@
         </a>
       </li>
       <li>
-        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item current">
+        <a id="its_a_small_world" data-id="7" href="its_a_small_world.html" class="challenge-item">
           <div class="current-arrow">▶️</div>
           it&#x27;s a small world
         </a>
@@ -119,51 +119,84 @@
       <div class="content">
         <div id="challenge-desc" class="challenge">
   <h2>The Challenge:</h2>
-  <p>Add a collaborator to your project.</p>
+  <p>Create a file in your new repository, add something to that file and
+    commit those changes to Git.</p>
 </div>
 
-<h2>Social Coding</h2>
+<h2>Step: Create a New File</h2>
 
-<p>Working with others is one of the best things about GitHub because
-  it makes it easy to work from all over the world at any time.</p>
+<p>Now that you&apos;ve got a repository started, add a file to it.</p>
 
-<p><strong>Collaborators</strong> are other GitHub users who are given permission to
-  make edits to a repository owned by someone else. To add
-  collaborators to a project, visit the repository's GitHub page
-  and click the 'Settings' icon on the right side menu. Then select the
-  'Collaborators' tab. Type in the username to add and click 'Add'.</p>
+<p>Open a text editor. Now write a couple of lines of text, perhaps
+  say hello, and save the file as <code>readme.txt</code> in the &apos;hello-world&apos; folder you created in the last challenge.</p>
 
-  <img src="../assets/imgs/reporobot.png" width="600">
+<h2>Step: Status, Add and Commit Changes</h2>
+<p>Next check the <strong>status</strong> of your repository to find out if there have been changes. Below in this terminal,
+  you should still be within the &apos;hello-world&apos; you created. See if there
+  are changes listed:</p>
 
-<h2>Step: Hello, Repo Robot!</h2>
-<p>Go to the your forked Patchwork repository's page on GitHub and
-  add 'reporobot' as a collaborator. The URL should look like this, but with your username.</p>
+<p><code>$ git status</code></p>
 
-<code>
-  github.com/YOURUSERNAME/patchwork/settings/collaboration</code>
+<p>Then <strong>add</strong> the file you just created to the files you&apos;d
+  like to <strong>commit</strong> (aka save) to change. </p>
+
+<p><code>$ git add readme.txt</code></p>
+
+<p>Finally, <strong>commit</strong> those changes to the repository&apos;s history with a
+  short description of the updates.</p>
+<p><code>$ git commit -m &quot;&lt;your commit message&gt;&quot;</code></p>
+
+<h2>Step: Make More Changes</h2>
+<p>Now add another line to <code>readme.txt</code> and save.</p>
+
+<p>In terminal, you can view the <strong>diff</strong>erence between the
+  file now and how it was at your last commit. </p>
+
+<p><code>$ git diff</code></p>
+
+<p>Now with what you just learned above, commit this latest change.</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
 </div>
 
+<div id="git-tips">
+  <h2>Tips</h2>
+  <ul>
+    <li><strong>Check status of changes to a repository</strong></li>
+    <li><code>$ git status</code></li>
+    <li><strong>View changes to files</strong></li>
+    <li><code>$ git diff</code></li>
+    <li><strong>Add a file&apos;s changes to be committed</strong></li>
+    <li><code>$ git add &lt;FILENAME&gt;</code></li>
+    <li><strong>To add all files changes</strong></li>
+    <li><code>$ git add .</code></li>
+    <li><strong>To commit (aka save) the changes you&apos;ve added with a short message describing the changes</strong></li>
+    <li><code>$ git commit -m &quot;&lt;your commit message&gt;&quot;</code></li>
+  <ul>
+</ul></ul></div>
+
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="branches_arent_just_for_birds.html" class="u-inline-block all-caps">branches aren&#x27;t just for birds
+    <a href="repository.html" class="u-inline-block all-caps">repository
     <div class="arrow-left"></div>
     </a>
   </div>
   <div class="u-textRight u-floatRight">
-    <a href="pull_never_out_of_date.html" class="u-inlineBlock all-caps">pull never out of date
+    <a href="githubbin.html" class="u-inlineBlock all-caps">GitHubbin
     <div class="arrow-right"></div>
     </a>
   </div>
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
@@ -177,7 +210,7 @@
 
     <script>
       var challengeStatus = require('../lib/challenge-completed.js')
-      var currentChallenge = 'its_a_small_world'
+      var currentChallenge = 'commit_to_it'
       challengeStatus.completed(currentChallenge)
     </script>
 

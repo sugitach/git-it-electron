@@ -19,14 +19,14 @@
     </select>
   </div>
   <div class="pagination">
-    <a href="../index.html"
+    <a href="../index-ja.html"
       <span class="hand">☜</span>
     </a>
     <a href="repository.html"
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
   <span class="challenge-title">get git</span>
@@ -34,7 +34,7 @@
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -118,46 +118,44 @@
 </div>
       <div class="content">
         <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Install Git on your computer and configure your name and email.</p>
+  <h2>&#x4ECA;&#x56DE;&#x306E;&#x8AB2;&#x984C;:</h2>
+  <p>Git &#x3092;&#x3042;&#x306A;&#x305F;&#x306E;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x3001;&#x3042;&#x306A;&#x305F;&#x306E;&#x30E1;&#x30FC;&#x30EB;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</p>
 </div>
 
 <h2>Git</h2>
 
-<p>Git is <strong>open source software</strong> (free for anyone to use) written
-  by Linus Torvalds who also wrote the Linux operating system. </p>
-<p>It is a program for keeping track of changes over time, known in
-  programming as <strong>version control</strong>.</p>
+<p>Git &#x306F; Linux &#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30C6;&#x30A3;&#x30F3;&#x30B0;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3092;&#x958B;&#x767A;&#x3057;&#x305F; Linus Torvalds &#x306E;&#x66F8;&#x3044;&#x305F;<strong>&#x30AA;&#x30FC;&#x30D7;&#x30F3;&#x30BD;&#x30FC;&#x30B9;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;</strong> (&#x8AB0;&#x3082;&#x304C;&#x81EA;&#x7531;&#x306B;&#x4F7F;&#x3048;&#x308B;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;) &#x3067;&#x3059;&#x3002;</p>
+<p>&#x3053;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x6642;&#x9593;&#x306E;&#x7D4C;&#x904E;&#x306B;&#x3068;&#x3082;&#x306A;&#x3046;&#x5185;&#x5BB9;&#x306E;&#x5909;&#x66F4;&#x3092;&#x7BA1;&#x7406;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;
+  &#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306F;<string>&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x30B3;&#x30F3;&#x30C8;&#x30ED;&#x30FC;&#x30EB;</string>&#x3068;&#x547C;&#x3070;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 
-<h2>Step: Install Git</h2>
+<h2>&#x624B;&#x9806;: Git&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
 
 <ul>
-  <li><strong>Windows</strong>: It's recommended to download GitHub Desktop,
-  which includes Git and has an easier install:
-  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. Use the <strong>Git Shell</strong> for your terminal.</li>
+  <li><strong>Windows</strong>&#x306E;&#x5834;&#x5408;: GitHub Desktop&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x306E;&#x304C;&#x304A;&#x52E7;&#x3081;&#x3067;&#x3059;&#x3002;
+    Git &#x304C;&#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x3066;&#x3001;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3082;&#x7C21;&#x5358;&#x3067;&#x3059;:
+  <a href="http://desktop.github.com" target="_blank">desktop.github.com</a>. <strong>Git Shell</strong> &#x3092;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x3068;&#x3057;&#x3066;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</li>
 
-  <li><strong>Mac</strong>: You can also download GitHub Desktop, which includes
-  Git, <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (from Preferences, select
-  the command line tools install), or
+  <li><strong>Mac</strong>&#x306E;&#x5834;&#x5408;: Mac&#x306E;&#x5834;&#x5408;&#x3067;&#x3082; GitHub Desktop &#x304C;&#x304A;&#x52E7;&#x3081;&#x306A;&#x306E;&#x306F;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;Git &#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
+    <a href="http://desktop.github.com/" target="_blank">desktop.github.com</a> (&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x5F8C;&#x306B;Preferences&#x306E;&#x4E2D;&#x304B;&#x3089;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;)&#x3002;&#x307E;&#x305F;&#x306F;&#x3001;
     <ul>
-      <li>download Git by itself at:
-      <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> and follow the installation instructions.</li>
+      <li>&#x3053;&#x3061;&#x3089;&#x304B;&#x3089; Git &#x306E;&#x307F;&#x3092;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;:
+      <a href="http://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> &#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x8AAC;&#x660E;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</li>
     </ul>
   </li>
 </ul>
 
-<p>Git isn't like other programs on your computer. You'll likely not
+<p>Git isn&apos;t like other programs on your computer. You&apos;ll likely not
 see an icon on your desktop, but it will always be available to you
-and you'll be able to access it at anytime from your
-terminal (which you're using in Git-it!) or Git desktop applications (like GitHub Desktop).</p>
+and you&apos;ll be able to access it at anytime from your
+terminal (which you&apos;re using in Git-it!) or Git desktop applications (like GitHub Desktop).</p>
 
 <h2>Step: Configure Git</h2>
 <p>Once it is installed, open <strong>terminal</strong> (aka Bash, aka Shell, aka Prompt).
-You can verify that it's really there by typing:</p>
+You can verify that it&apos;s really there by typing:</p>
 
 <p><code>$ git --version </code></p>
 
-<p>This will return the version of Git that you're running and look something like this:</p>
+<p>This will return the version of Git that you&apos;re running and look something like this:</p>
 
 <p><code>git version 1.9.1</code></p>
 
@@ -166,12 +164,12 @@ You can verify that it's really there by typing:</p>
 <p>Next, configure Git so it knows who to associate your changes to:</p>
 
 <p>Set your name:</p>
-<p><code>$ git config --global user.name "&#60;Your Name&#62;"</code></p>
+<p><code>$ git config --global user.name &quot;&lt;Your Name&gt;&quot;</code></p>
 <p>Now set your email:</p>
-<p><code>$ git config --global user.email "&#60;youremail@example.com&#62;"</code></p>
+<p><code>$ git config --global user.email &quot;&lt;youremail@example.com&gt;&quot;</code></p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id="verify-challenge">VERIFY</button>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
@@ -180,13 +178,13 @@ You can verify that it's really there by typing:</p>
 <div id="git-tips">
   <h2>Tips</h2>
   <p>Dollar signs <code>$</code> are often used in programming documentation
-to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
-type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
+to signify that the line is <strong>command line</strong> code (see the code snippets above). You don&apos;t actually
+type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you&apos;re actually going to type <code>git-it verify</code> into terminal.</p>
 </div>
 
         <div class="prenext">
   <div class="u-floatLeft">
-    <a href="../index.html" class="u-inline-block all-caps">All Challenges
+    <a href="../index-ja.html" class="u-inline-block all-caps">All Challenges
     <div class="arrow-left"></div>
     </a>
   </div>
@@ -198,7 +196,7 @@ type the <code>$</code> in though, only type what comes after. For instance, to 
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>

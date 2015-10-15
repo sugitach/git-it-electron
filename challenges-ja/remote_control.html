@@ -26,7 +26,7 @@
       <span class="hand">☞</span>
     </a>
   </div>
-  <a class="filledblock" href="../index.html">
+  <a class="filledblock" href="../index-ja.html">
     Git-it
   </a>
   <span class="challenge-title">remote control</span>
@@ -34,7 +34,7 @@
 
 <script type="text/javascript">
   var selector = document.getElementById('lang-select')
-  var currentLang = "".replace(/-/, '')
+  var currentLang = "-ja".replace(/-/, '')
   selector.value = currentLang
   selector.addEventListener('change', function () {
     var currentChallenge = document.querySelector('.challenge-item.current')
@@ -124,7 +124,7 @@
 
 <h2>Remotes</h2>
 
-<p>When you put something on GitHub, that copy lives on one of GitHub's servers. This makes it a <strong>remote</strong> repository because it is not on your computer, but on a server, "remote" and somewhere else. By <strong>pushing</strong> your <strong>local</strong> (on your computer)
+<p>When you put something on GitHub, that copy lives on one of GitHub&apos;s servers. This makes it a <strong>remote</strong> repository because it is not on your computer, but on a server, &quot;remote&quot; and somewhere else. By <strong>pushing</strong> your <strong>local</strong> (on your computer)
   changes to it, you keep it up to date.</p>
 
   <p>Others can always get the
@@ -139,14 +139,14 @@
   remote repository on GitHub.com.</p>
 
 <ul>
-  <li>Go to <a href="http://github.com/" target="_blank">github.com</a>, log in, and click the '+' in the top
+  <li>Go to <a href="http://github.com/" target="_blank">github.com</a>, log in, and click the &apos;+&apos; in the top
 right to create a new repository.</li>
-  <li>Give it a name that matches your local repository's name, 'hello-world', and a short
+  <li>Give it a name that matches your local repository&apos;s name, &apos;hello-world&apos;, and a short
 description.</li>
   <li>Make it public.</li>
-  <li>Don't initialize with a README because we already have a file, locally, named
-'readme.txt'.</li>
-  <li>Leave .gitignore and license on 'none'.</li>
+  <li>Don&apos;t initialize with a README because we already have a file, locally, named
+&apos;readme.txt&apos;.</li>
+  <li>Leave .gitignore and license on &apos;none&apos;.</li>
   <li>Click create repository!</li>
 </ul>
 
@@ -162,43 +162,43 @@ CONTRIBUTING.md, for those details).</p>
 <p>A <strong>license</strong> file is the type of license you put on your project,
 information on the types is here:
 <a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.</p>
-<p>We don't need any of them, however, for this example.</p>
+<p>We don&apos;t need any of them, however, for this example.</p>
 
 <h2>Step: Connect your Local to your Remote</h2>
-<p>Now you've got an empty repository started on GitHub.com. At the
-top you'll see 'Quick Setup', make sure the 'HTTP' button is
-selected and copy the address — this is the location (address) of your
-repository on GitHub's servers.</p>
+<p>Now you&apos;ve got an empty repository started on GitHub.com. At the
+top you&apos;ll see &apos;Quick Setup&apos;, make sure the &apos;HTTP&apos; button is
+selected and copy the address &#x2014; this is the location (address) of your
+repository on GitHub&apos;s servers.</p>
 
-<p>Back in your terminal, and inside of the 'hello-world' folder that you
+<p>Back in your terminal, and inside of the &apos;hello-world&apos; folder that you
 initialized as a Git repository in the earlier challenge, you
-want to tell Git the location of the remote version on GitHub's servers. You can have multiple remotes so each requires a name. For your main one, this is commonly named <code>origin</code>.</p>
+want to tell Git the location of the remote version on GitHub&apos;s servers. You can have multiple remotes so each requires a name. For your main one, this is commonly named <code>origin</code>.</p>
 
 <code>$ git remote add origin &lt;URLFROMGITHUB&gt;</code>
 
-<p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> one named 'origin' lives on GitHub's servers. Think of it as adding a name and address on speed dial — now when you need to send something there, you can.</p>
+<p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> one named &apos;origin&apos; lives on GitHub&apos;s servers. Think of it as adding a name and address on speed dial &#x2014; now when you need to send something there, you can.</p>
 
 <blockquote>
 <p><strong>A note:</strong></p>
 <p>If you have <strong>GitHub for Windows</strong> on your computer, a remote
-  named 'origin' is automatically created. In that case, you'll
+  named &apos;origin&apos; is automatically created. In that case, you&apos;ll
   just need to tell it what URL to associate with origin. Use this
-  command instead of the 'add' one above:</p>
+  command instead of the &apos;add&apos; one above:</p>
 
 <code>$ git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
 </blockquote>
 
 <h2>Step: Push Work to your Remote</h2>
-<p>Next you want to <strong>push</strong> (send) everything you've done locally
+<p>Next you want to <strong>push</strong> (send) everything you&apos;ve done locally
   to GitHub. Ideally you want to stay in sync, meaning your local and remote versions match.</p>
 
 <p>Git has a branching system so that you can work on different
-  parts of a project at different times. We'll learn more about that later, but by default the first
-  branch is named 'master'. When you push (and later pull) from
+  parts of a project at different times. We&apos;ll learn more about that later, but by default the first
+  branch is named &apos;master&apos;. When you push (and later pull) from
   a project, you tell Git the <strong>branch name</strong> you want and the
   name of the <strong>remote</strong> that it lives on.
 
-<p>In this case, we'll send our branch named 'master' to our remote on GitHub named 'origin'. </p>
+</p><p>In this case, we&apos;ll send our branch named &apos;master&apos; to our remote on GitHub named &apos;origin&apos;. </p>
 
 <code>$ git push origin master</code>
 
@@ -207,10 +207,10 @@ want to tell Git the location of the remote version on GitHub's servers. You can
   first public repository!</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
-  <button class="white" id='select-directory'>SELECT DIRECTORY</button>
-  <span id='path-required-warning'>Please select your repository directory.</span>
-  <span id='directory-path'></span>
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
@@ -246,7 +246,7 @@ want to tell Git the location of the remote version on GitHub's servers. You can
 </div>
 <footer>
   <ul>
-    <li class="all-caps"><a href="../index.html"><strong>Git-it Challenges</strong></a></li>
+    <li class="all-caps"><a href="../index-ja.html"><strong>Git-it Challenges</strong></a></li>
     <li class="all-caps"><a href="../pages/about.html">About</a></li>
     <li class="all-caps"><a href="../pages/dictionary.html">Dictionary</a></li>
     <li class="all-caps"><a href="../pages/resources.html">Resources</a></li>
