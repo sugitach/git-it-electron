@@ -26,35 +26,34 @@
 </ul>
 
 <p>Git はあなたのコンピュータにインストールされている他のプログラムとはちょっと毛色が違います。
-  デスクトップ上にはアイコンは表示されませんが、コンピュータ内にはちゃんとあって、
-  いつでも端末(ターミナル)プログラムや GitHub desktop のような Git desktop アプリケーションからアクセスすることができます。
+  普通はデスクトップやアプリケーションフォルダにはアイコンが表示されませんが、コンピュータ内にはちゃんとあって、
+  端末(ターミナル)プログラムや (GitHub desktop のような) Git desktop アプリケーションからアクセスすることができます。
 </p>
 
 <h2>手順: Git の設定</h2>
-<p>インストールが終ったら (Bash や Shell や Prompt のような)<strong>端末(ターミナル)</strong> を開いてください。
-  
-You can verify that it's really there by typing:</p>
+<p>インストールが終ったら <strong>端末(ターミナル)</strong> (あるいは Bash, Shell, Prompt)を開いてください。
+正しくインストールされていることを確認するために、以下のコマンドを実行してみてください:  </p>
 
 <p><code>$ git --version </code></p>
 
-<p>This will return the version of Git that you're running and look something like this:</p>
+<p>うまくいけば次のようなバージョン表記が返ってくるはずです:</p>
 
 <p><code>git version 1.9.1</code></p>
 
-<p>(Any version <code>1.7.10</code> or higher is fine.)</p>
+<p>(<code>1.7.10</code>以上のバージョンが望ましいです)</p>
 
-<p>Next, configure Git so it knows who to associate your changes to:</p>
+<p>次に Git にあなたの名前とメールアドレスを設定して、他の人との区別ができるようにしましょう:</p>
 
-<p>Set your name:</p>
+<p>名前の設定:</p>
 <p><code>$ git config --global user.name "&#60;Your Name&#62;"</code></p>
-<p>Now set your email:</p>
+<p>メールアドレスの設定:</p>
 <p><code>$ git config --global user.email "&#60;youremail@example.com&#62;"</code></p>
 
 {{{verify_button}}}
 
 <div id="git-tips">
   <h2>Tips</h2>
-  <p>Dollar signs <code>$</code> are often used in programming documentation
-to signify that the line is <strong>command line</strong> code (see the code snippets above). You don't actually
-type the <code>$</code> in though, only type what comes after. For instance, to run the verify command above, you're actually going to type <code>git-it verify</code> into terminal.</p>
+  <p>プログラミング文書では<code>$</code>マークが<strong>コマンドライン</strong>の目印としてよく使われます (このあとに出てくるコード表記を見てみてください)。
+    この<code>$</code>マークは入力の必要はなく、それに続けて書かれている文字列のみ入力します。
+    例えば、git-itの確認コマンドを実行するときには、<code>git-it verify</code> の部分のみをターミナルに入力します。</p>
 </div>
