@@ -118,49 +118,45 @@
 </div>
       <div class="content">
         <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Create a file in your new repository, add something to that file and
-    commit those changes to Git.</p>
+  <h2>今回の課題:</h2>
+  <p>新しいリポジトリにファイルを作成し、そのファイルになにかを追加して、
+    それらの変更をGitにコミットする</p>
 </div>
 
-<h2>Step: Create a New File</h2>
+<h2>ステップ: 新しいファイルを作成する</h2>
 
-<p>Now that you&apos;ve got a repository started, add a file to it.</p>
+<p>ここまでで、開始されたリポジトリがあるので、そこにファイルを追加します。</p>
 
-<p>Open a text editor. Now write a couple of lines of text, perhaps
-  say hello, and save the file as <code>readme.txt</code> in the &apos;hello-world&apos; folder you created in the last challenge.</p>
+<p>テキストエディタを開きます。そうしたら、何行かのテキストを書きます(たとえば、say helloなど)、
+  そして、<code>readme.txt</code>として、前の課題で作成した'hello-world'フォルダの中にファイルに保存します。</p>
 
-<h2>Step: Status, Add and Commit Changes</h2>
-<p>Next check the <strong>status</strong> of your repository to find out if there have been changes. Below in this terminal,
-  you should still be within the &apos;hello-world&apos; you created. See if there
-  are changes listed:</p>
+<h2>ステップ: 変更の状態、追加、そしてコミット</h2>
+<p>次に、変更があったかどうか知るために、リポジトリの<strong>状態</strong>をチェックします。下記のターミナルでは、
+  作成した 'hello-world' の中にまだ居るとします。変更がリストされるか見ます:</p>
 
 <p><code>$ git status</code></p>
 
-<p>Then <strong>add</strong> the file you just created to the files you&apos;d
-  like to <strong>commit</strong> (aka save) to change. </p>
+<p>それから、変更を<strong>コミット</strong>(保存)したいファイル群に、作成したファイルを<strong>追加</strong>します。</p>
 
 <p><code>$ git add readme.txt</code></p>
 
-<p>Finally, <strong>commit</strong> those changes to the repository&apos;s history with a
-  short description of the updates.</p>
-<p><code>$ git commit -m &quot;&lt;your commit message&gt;&quot;</code></p>
+<p>最後に、それらの変更をリポジトリの履歴に、短い更新の説明を添えて<strong>コミット</strong>します。</p>
+<p><code>$ git commit -m "&#60;your commit message&#62;"</code></p>
 
-<h2>Step: Make More Changes</h2>
-<p>Now add another line to <code>readme.txt</code> and save.</p>
+<h2>ステップ: さらに変更する</h2>
+<p>そうしたら、別の行を<code>readme.txt</code>に追加して、保存します。</p>
 
-<p>In terminal, you can view the <strong>diff</strong>erence between the
-  file now and how it was at your last commit. </p>
+<p>ターミナルで、現在のファイルと、最後にコミットした時点の状態との<strong>差分</strong>を見ることができます。</p>
 
 <p><code>$ git diff</code></p>
 
-<p>Now with what you just learned above, commit this latest change.</p>
+<p>それでは、上記で学んだことを使って、最後の変更をコミットしてください。</p>
 
 <div class="verify">
-  <button class="white" id="verify-challenge">VERIFY</button>
-  <button class="white" id="select-directory">SELECT DIRECTORY</button>
-  <span id="path-required-warning">Please select your repository directory.</span>
-  <span id="directory-path"></span>
+  <button class="white" id='verify-challenge'>VERIFY</button>
+  <button class="white" id='select-directory'>SELECT DIRECTORY</button>
+  <span id='path-required-warning'>Please select your repository directory.</span>
+  <span id='directory-path'></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
@@ -169,18 +165,18 @@
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>Check status of changes to a repository</strong></li>
+    <li><strong>リポジトリへの変更の状態を確認する</strong></li>
     <li><code>$ git status</code></li>
-    <li><strong>View changes to files</strong></li>
+    <li><strong>ファイルへの変更を見る</strong></li>
     <li><code>$ git diff</code></li>
-    <li><strong>Add a file&apos;s changes to be committed</strong></li>
-    <li><code>$ git add &lt;FILENAME&gt;</code></li>
-    <li><strong>To add all files changes</strong></li>
+    <li><strong>コミットされるファイルの変更を追加する</strong></li>
+    <li><code>$ git add &#60;FILENAME&#62;</code></li>
+    <li><strong>全ファイルの変更を追加するには</strong></li>
     <li><code>$ git add .</code></li>
-    <li><strong>To commit (aka save) the changes you&apos;ve added with a short message describing the changes</strong></li>
-    <li><code>$ git commit -m &quot;&lt;your commit message&gt;&quot;</code></li>
+    <li><strong>追加した変更に、変更を説明する短いメッセージを添えてコミット(保存)するには</strong></li>
+    <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
   <ul>
-</ul></ul></div>
+</div>
 
         <div class="prenext">
   <div class="u-floatLeft">
