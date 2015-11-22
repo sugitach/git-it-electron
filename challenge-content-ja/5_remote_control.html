@@ -1,106 +1,82 @@
 <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Connect your local and remote repositories and push changes.</p>
+  <h2>今回の課題:</h2>
+  <p>ローカルとリモートのリポジトリを接続して、変更をプッシュする。</p>
 </div>
 
-<h2>Remotes</h2>
+<h2>リモート</h2>
 
-<p>When you put something on GitHub, that copy lives on one of GitHub's servers. This makes it a <strong>remote</strong> repository because it is not on your computer, but on a server, "remote" and somewhere else. By <strong>pushing</strong> your <strong>local</strong> (on your computer)
-  changes to it, you keep it up to date.</p>
+<p>GitHubになにかを置くと、そのコピーは、GitHubのサーバーのうちのどれかに場所を得ます。これにより、リポジトリは、<strong>リモート</strong>リポジトリになります。なぜなら、それが、あなたのコンピューター上ではなく、サーバー上(遠隔のどこか別の場所)にあるからです。<strong>ローカル</strong>の変更を<strong>プッシュ</strong>することによって、リモートを最新の状態に保ちます。</p>
 
-  <p>Others can always get the
-  latest from your project by <strong>pulling</strong> your changes down from the remote (and onto their computer). This is how everyone can work on a project together without needing
-  access to your computer where your local copy is stored.</p>
+<p>他の人は、リモートから変更を<strong>プル</strong>する(そして、コンピューターに保存する)ことによって、常に最新版をプロジェクトから取得できます。これが、人々が、あなたのローカルコピーが保存されたコンピューターにアクセスせずに、ひとつのプロジェクトでいっしょに作業する方法です。</p>
 
   <img src="../assets/imgs/remotes.png" width="600">
 
-<h2>Step: Create a Remote Repository</h2>
-<p>You want to sync your <strong>local</strong> version with one stored on GitHub.com
-  called the <strong>remote</strong> version. So first create an empty
-  remote repository on GitHub.com.</p>
+<h2>ステップ: リモートリポジトリの作成</h2>
+<p><strong>ローカル</strong>版と GitHub.com に置かれた<strong>リモート</strong>版と呼ばれるものを同期する必要があります。ですので、まずは、空のリモートリポジトリを GitHub.com に作ってください。</p>
 
 <ul>
-  <li>Go to <a href="http://github.com/" target="_blank">github.com</a>, log in, and click the '+' in the top
-right to create a new repository.</li>
-  <li>Give it a name that matches your local repository's name, 'hello-world', and a short
-description.</li>
-  <li>Make it public.</li>
-  <li>Don't initialize with a README because we already have a file, locally, named
-'readme.txt'.</li>
-  <li>Leave .gitignore and license on 'none'.</li>
-  <li>Click create repository!</li>
+  <li><a href="http://github.com/" target="_blank">github.com</a> へ行って、ログインし、上部の右側にある '+' をクリックして、新しいリポジトリを作成する。</li>
+  <li>ローカルリポジトリの名前と一致する名前('hello-world')と、簡単な説明を与える。</li>
+  <li>パブリックにする。</li>
+  <li>READMEといっしに初期化しないこと。なぜなら、我々は、すでに 'readme.txt' いう名前のファイルを持っています。</li>
+  <li>.gitignore と licence を'none' のままにしておく。</li>
+  <li>Create repositoryをクリックする!</li>
 </ul>
 
-<h2>Readmes, .gitignores and Licenses</h2>
-<p>These are common files in open source projects.</p>
+<h2>Readme, .gitignore, そしてLicense</h2>
+<p>オープンソースプロジェクトに共通するファイルがいくつかあります。</p>
 
-<p>A <strong>readme</strong> explains what the project is, how to use it, and often
-times, how to contribute (though sometimes there is an extra file,
-CONTRIBUTING.md, for those details).</p>
+<p><strong>readme</strong> は、プロジェクトが何なのか、どのように使うのか、そして、しばしば、どのように貢献するのか(詳細のためにCONTRIBUTING.md という追加のファイルがある場合もありますが)を説明します。</p>
 
-<p>A <strong>.gitignore</strong> is a list of files that Git should <em>not</em> track, for instance, files with passwords!</p>
+<p><strong>.gitigreno</strong> は、Gitが追跡すべきで<em>ない</em>ファイルのリストです。たとえば、パスワードが書かれたファイルとか!</p>
 
-<p>A <strong>license</strong> file is the type of license you put on your project,
-information on the types is here:
-<a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>.</p>
-<p>We don't need any of them, however, for this example.</p>
+<p><strong>license</strong> ファイルは、プロジェクトに付与するライセンスの種別で、その種別に関する情報はここにあります:
+<a href="http://www.choosealicense.com" target="_blank">choosealicense.com</a>。</p>
+<p>しかしながら、この例題では、いずれも必要ではありません。</p>
 
-<h2>Step: Connect your Local to your Remote</h2>
-<p>Now you've got an empty repository started on GitHub.com. At the
-top you'll see 'Quick Setup', make sure the 'HTTP' button is
-selected and copy the address — this is the location (address) of your
-repository on GitHub's servers.</p>
+<h2>ステップ: ローカルとリモートを接続する</h2>
+<p>さて、GitHub.com 上で、空のリポジトリが手に入りました。上のほうに、'Quick Setup' が見えると思います、'HTTP' ボタンが選択されていることを確認の上、そのアドレスをコピーしてください — これは、GitHubのサーバー上でのあなたのリポジトリの場所(アドレス)です。</p>
 
-<p>Back in your terminal, and inside of the 'hello-world' folder that you
-initialized as a Git repository in the earlier challenge, you
-want to tell Git the location of the remote version on GitHub's servers. You can have multiple remotes so each requires a name. For your main one, this is commonly named <code>origin</code>.</p>
+<p>ターミナルに戻って、前の課題でGitリポジトリとして初期化した 'hello-world' フォルダーの中にいき、Git に GitHub のサーバー上にあるリモート版の場所を教える必要があります。メインのリモートは、ふつう <code>origin</code> と名付けられます。</p>
 
 <code>$ git remote add origin &lt;URLFROMGITHUB&gt;</code>
 
-<p>Your <strong>local</strong> repository now knows where your <strong>remote</strong> one named 'origin' lives on GitHub's servers. Think of it as adding a name and address on speed dial — now when you need to send something there, you can.</p>
+<p><strong>ローカル</strong>リポジトリは、いまや、GitHubのサーバー上にある 'origin' と名付けられた <strong>リモート</strong>リポジトリがどこにあるのか知っています。電話帳に名前と住所を追加したようなものと考えてください — これで、なにかをそこに送る必要があるときに、そうすることができます。</p>
 
 <blockquote>
-<p><strong>A note:</strong></p>
-<p>If you have <strong>GitHub for Windows</strong> on your computer, a remote
-  named 'origin' is automatically created. In that case, you'll
-  just need to tell it what URL to associate with origin. Use this
-  command instead of the 'add' one above:</p>
+<p><strong>注意:</strong></p>
+<p>もしあなたのコンピューターで <strong>GitHub for Windows</strong> を使っているなら、'origin' という名前のリモートが、自動的に作成されます。
+この場合、単に origin にどの URL を関連付けるかを教えるだけで十分です。このコマンドを、 上記の 'add' の替わりに使ってください。</p>
 
 <code>$ git remote set-url origin &lt;URLFROMGITHUB&gt;</code>
 </blockquote>
 
-<h2>Step: Push Work to your Remote</h2>
-<p>Next you want to <strong>push</strong> (send) everything you've done locally
-  to GitHub. Ideally you want to stay in sync, meaning your local and remote versions match.</p>
+<h2>ステップ: リモートに作業をプッシュする</h2>
+<p>次に、ローカルでやったことを全部、GitHub に<strong>プッシュ</strong>(送信)する必要があります。理想的には、同期状態を保つべきです、つまり、ローカルとリモートのバージョンを一致させる、という意味です。</p>
 
-<p>Git has a branching system so that you can work on different
-  parts of a project at different times. We'll learn more about that later, but by default the first
-  branch is named 'master'. When you push (and later pull) from
-  a project, you tell Git the <strong>branch name</strong> you want and the
-  name of the <strong>remote</strong> that it lives on.
+<p>Gitにはブランチシステムがあるので、プロジェクトの異なる部分で、異なるときに作業することができます。詳しくは後で学びますが、デフォルトでは、はじめのブランチは 'master' という名前になっています。プロジェクトからプッシュするとき(そして、後々プルするとき)、Git に 望みの<strong>ブランチ名</strong>と、それが置かれる<strong>リモート</strong>を教えます。</p>
 
-<p>In this case, we'll send our branch named 'master' to our remote on GitHub named 'origin'. </p>
+<p>この場合、'master' という名前のブランチを GitHubにある 'origin' というリモートに送ります。</p>
 
 <code>$ git push origin master</code>
 
-<p>Now go to GitHub and refresh the page of your repository. WOAH!
-  Everything is the same locally and remotely. Congrats on your
-  first public repository!</p>
+<p>さて、GitHubにいって、リポジトリのページを更新してください。ワオ!
+すべては、ローカルでもリモートでも同じです。はじめての公開リポジトリおめでとうございます。</p>
 
 {{{verify_directory_button}}}
 
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>Add remote connections</strong></li>
+    <li><strong>リモート接続を追加する</strong></li>
     <code>$ git remote add &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-    <li><strong>Set a URL to a remote</strong></li>
+    <li><strong>リモートのURLを設定する</strong></li>
     <code>$ git remote set-url &lt;REMOTENAME&gt; &lt;URL&gt;</code>
-    <li><strong>Pull in changes</strong></li>
+    <li><strong>変更をプルする</strong></li>
     <code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code>
-    <li><strong>View remote connections</strong></li>
+    <li><strong>リモート接続を表示する</strong></li>
     <code>$ git remote -v</code>
-    <li><strong>Push changes</strong></li>
+    <li><strong>変更をプッシュする</strong></li>
     <code>$ git push &lt;REMOTENAME&gt; &lt;BRANCH&gt;</code>
   </ul>
 </div>
