@@ -118,45 +118,45 @@
 </div>
       <div class="content">
         <div id="challenge-desc" class="challenge">
-  <h2>今回の課題:</h2>
-  <p>新しいリポジトリにファイルを作成し、そのファイルになにかを追加して、
-    それらの変更をGitにコミットする</p>
+  <h2>&#x4ECA;&#x56DE;&#x306E;&#x8AB2;&#x984C;:</h2>
+  <p>&#x65B0;&#x3057;&#x3044;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3001;&#x305D;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x306A;&#x306B;&#x304B;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x3001;
+    &#x305D;&#x308C;&#x3089;&#x306E;&#x5909;&#x66F4;&#x3092;Git&#x306B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3059;&#x308B;</p>
 </div>
 
-<h2>ステップ: 新しいファイルを作成する</h2>
+<h2>&#x30B9;&#x30C6;&#x30C3;&#x30D7;: &#x65B0;&#x3057;&#x3044;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;</h2>
 
-<p>ここまでで、開始されたリポジトリがあるので、そこにファイルを追加します。</p>
+<p>&#x3053;&#x3053;&#x307E;&#x3067;&#x3067;&#x3001;&#x958B;&#x59CB;&#x3055;&#x308C;&#x305F;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x305D;&#x3053;&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 
-<p>テキストエディタを開きます。そうしたら、何行かのテキストを書きます(たとえば、say helloなど)、
-  そして、<code>readme.txt</code>として、前の課題で作成した'hello-world'フォルダの中にファイルに保存します。</p>
+<p>&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x3092;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;&#x305D;&#x3046;&#x3057;&#x305F;&#x3089;&#x3001;&#x4F55;&#x884C;&#x304B;&#x306E;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x3092;&#x66F8;&#x304D;&#x307E;&#x3059;(&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;say hello&#x306A;&#x3069;)&#x3001;
+  &#x305D;&#x3057;&#x3066;&#x3001;<code>readme.txt</code>&#x3068;&#x3057;&#x3066;&#x3001;&#x524D;&#x306E;&#x8AB2;&#x984C;&#x3067;&#x4F5C;&#x6210;&#x3057;&#x305F;&apos;hello-world&apos;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E2D;&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x4FDD;&#x5B58;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 
-<h2>ステップ: 変更の状態、追加、そしてコミット</h2>
-<p>次に、変更があったかどうか知るために、リポジトリの<strong>状態</strong>をチェックします。下記のターミナルでは、
-  作成した 'hello-world' の中にまだ居るとします。変更がリストされるか見ます:</p>
+<h2>&#x30B9;&#x30C6;&#x30C3;&#x30D7;: &#x5909;&#x66F4;&#x306E;&#x72B6;&#x614B;&#x3001;&#x8FFD;&#x52A0;&#x3001;&#x305D;&#x3057;&#x3066;&#x30B3;&#x30DF;&#x30C3;&#x30C8;</h2>
+<p>&#x6B21;&#x306B;&#x3001;&#x5909;&#x66F4;&#x304C;&#x3042;&#x3063;&#x305F;&#x304B;&#x3069;&#x3046;&#x304B;&#x77E5;&#x308B;&#x305F;&#x3081;&#x306B;&#x3001;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;<strong>&#x72B6;&#x614B;</strong>&#x3092;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3059;&#x3002;&#x4E0B;&#x8A18;&#x306E;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x3067;&#x306F;&#x3001;
+  &#x4F5C;&#x6210;&#x3057;&#x305F; &apos;hello-world&apos; &#x306E;&#x4E2D;&#x306B;&#x307E;&#x3060;&#x5C45;&#x308B;&#x3068;&#x3057;&#x307E;&#x3059;&#x3002;&#x5909;&#x66F4;&#x304C;&#x30EA;&#x30B9;&#x30C8;&#x3055;&#x308C;&#x308B;&#x304B;&#x898B;&#x307E;&#x3059;:</p>
 
 <p><code>$ git status</code></p>
 
-<p>それから、変更を<strong>コミット</strong>(保存)したいファイル群に、作成したファイルを<strong>追加</strong>します。</p>
+<p>&#x305D;&#x308C;&#x304B;&#x3089;&#x3001;&#x5909;&#x66F4;&#x3092;<strong>&#x30B3;&#x30DF;&#x30C3;&#x30C8;</strong>(&#x4FDD;&#x5B58;)&#x3057;&#x305F;&#x3044;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x7FA4;&#x306B;&#x3001;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;<strong>&#x8FFD;&#x52A0;</strong>&#x3057;&#x307E;&#x3059;&#x3002;</p>
 
 <p><code>$ git add readme.txt</code></p>
 
-<p>最後に、それらの変更をリポジトリの履歴に、短い更新の説明を添えて<strong>コミット</strong>します。</p>
-<p><code>$ git commit -m "&#60;your commit message&#62;"</code></p>
+<p>&#x6700;&#x5F8C;&#x306B;&#x3001;&#x305D;&#x308C;&#x3089;&#x306E;&#x5909;&#x66F4;&#x3092;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x5C65;&#x6B74;&#x306B;&#x3001;&#x77ED;&#x3044;&#x66F4;&#x65B0;&#x306E;&#x8AAC;&#x660E;&#x3092;&#x6DFB;&#x3048;&#x3066;<strong>&#x30B3;&#x30DF;&#x30C3;&#x30C8;</strong>&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p><code>$ git commit -m &quot;&lt;your commit message&gt;&quot;</code></p>
 
-<h2>ステップ: さらに変更する</h2>
-<p>そうしたら、別の行を<code>readme.txt</code>に追加して、保存します。</p>
+<h2>&#x30B9;&#x30C6;&#x30C3;&#x30D7;: &#x3055;&#x3089;&#x306B;&#x5909;&#x66F4;&#x3059;&#x308B;</h2>
+<p>&#x305D;&#x3046;&#x3057;&#x305F;&#x3089;&#x3001;&#x5225;&#x306E;&#x884C;&#x3092;<code>readme.txt</code>&#x306B;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x3001;&#x4FDD;&#x5B58;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 
-<p>ターミナルで、現在のファイルと、最後にコミットした時点の状態との<strong>差分</strong>を見ることができます。</p>
+<p>&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x3067;&#x3001;&#x73FE;&#x5728;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3068;&#x3001;&#x6700;&#x5F8C;&#x306B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3057;&#x305F;&#x6642;&#x70B9;&#x306E;&#x72B6;&#x614B;&#x3068;&#x306E;<strong>&#x5DEE;&#x5206;</strong>&#x3092;&#x898B;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 
 <p><code>$ git diff</code></p>
 
-<p>それでは、上記で学んだことを使って、最後の変更をコミットしてください。</p>
+<p>&#x305D;&#x308C;&#x3067;&#x306F;&#x3001;&#x4E0A;&#x8A18;&#x3067;&#x5B66;&#x3093;&#x3060;&#x3053;&#x3068;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3001;&#x6700;&#x5F8C;&#x306E;&#x5909;&#x66F4;&#x3092;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 
 <div class="verify">
-  <button class="white" id='verify-challenge'>VERIFY</button>
-  <button class="white" id='select-directory'>SELECT DIRECTORY</button>
-  <span id='path-required-warning'>Please select your repository directory.</span>
-  <span id='directory-path'></span>
+  <button class="white" id="verify-challenge">VERIFY</button>
+  <button class="white" id="select-directory">SELECT DIRECTORY</button>
+  <span id="path-required-warning">Please select your repository directory.</span>
+  <span id="directory-path"></span>
   <ul id="verify-list">
   </ul>
   <button class="white full-width" id="clear-completed-challenge">Clear completed status</button>
@@ -165,18 +165,18 @@
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>リポジトリへの変更の状態を確認する</strong></li>
+    <li><strong>&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3078;&#x306E;&#x5909;&#x66F4;&#x306E;&#x72B6;&#x614B;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;</strong></li>
     <li><code>$ git status</code></li>
-    <li><strong>ファイルへの変更を見る</strong></li>
+    <li><strong>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x306E;&#x5909;&#x66F4;&#x3092;&#x898B;&#x308B;</strong></li>
     <li><code>$ git diff</code></li>
-    <li><strong>コミットされるファイルの変更を追加する</strong></li>
-    <li><code>$ git add &#60;FILENAME&#62;</code></li>
-    <li><strong>全ファイルの変更を追加するには</strong></li>
+    <li><strong>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3055;&#x308C;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5909;&#x66F4;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;</strong></li>
+    <li><code>$ git add &lt;FILENAME&gt;</code></li>
+    <li><strong>&#x5168;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5909;&#x66F4;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x306B;&#x306F;</strong></li>
     <li><code>$ git add .</code></li>
-    <li><strong>追加した変更に、変更を説明する短いメッセージを添えてコミット(保存)するには</strong></li>
-    <li><code>$ git commit -m "&#60;your commit message&#62;"</code></li>
+    <li><strong>&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x5909;&#x66F4;&#x306B;&#x3001;&#x5909;&#x66F4;&#x3092;&#x8AAC;&#x660E;&#x3059;&#x308B;&#x77ED;&#x3044;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x6DFB;&#x3048;&#x3066;&#x30B3;&#x30DF;&#x30C3;&#x30C8;(&#x4FDD;&#x5B58;)&#x3059;&#x308B;&#x306B;&#x306F;</strong></li>
+    <li><code>$ git commit -m &quot;&lt;your commit message&gt;&quot;</code></li>
   <ul>
-</div>
+</ul></ul></div>
 
         <div class="prenext">
   <div class="u-floatLeft">
