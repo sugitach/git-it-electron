@@ -1,58 +1,56 @@
 <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Fork a project from GitHub.com and clone it locally.</p>
+  <h2>今回の課題:</h2>
+  <p>GitHub.comからプロジェクトをフォークし、それをローカルにクローンする。</p>
 </div>
 
-<h2>Forks</h2>
+<h2>フォーク</h2>
 
-<p>Now you've made a project locally and pushed it to GitHub, but that's
-  only half the fun. The other half is working with other people and
-  projects.</p>
+<p>ローカルでプロジェクトを作成し、それをGitHubにプッシュすることができました。
+  しかし、それではまだGitHubの楽しみ方の半分しか体験していません。
+  もう半分は、他の人と他のリポジトリで作業をするという楽しみ方です。</p>
 
-<p>When you <strong>fork</strong> a repository, you're creating a copy of it on
-  your GitHub account. Your fork begins its life as a <strong>remote</strong> repository. Forks are used for creating your own
-  version of a project or contributing back fixes or features to the
-  original project. </p>
+<p>リポジトリを<strong>フォーク</strong>したとき、あなたは自分のGitHubアカウント上にそのリポジトリのコピーを作成します。
+  あなたがフォークしたリポジトリは<strong>リモート</strong>リポジトリとして生まれます。
+  フォークしたリポジトリはあなただけのバージョンのプロジェクトを作成する際や、
+  オリジナルのプロジェクトに修正や機能をコントリビュートする際に使用されます。</p>
 
-<p>Once a project is forked, you then <strong>clone</strong> (aka copy) it from
-  GitHub to your computer to work on locally.</p>
+<p>プロジェクトをフォークしたら、次はローカルで動作させるためにGitHubからあなたのコンピューターへ<strong>クローン</strong>(コピー)します。</p>
 
 <img src="../assets/imgs/clone.png" width="600">
 
-<h2>Step: Fork Patchwork Repository</h2>
-<p>The project we'll work with is <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>. Go to that site and click the fork button at the top right. Once the
-  fork animation is complete, you've got a copy on your account. Copy
-  your fork's HTTP URL on the right sidebar.</p>
+<h2>ステップ: Patchworkリポジトリのフォーク</h2>
+<p>今回使用するプロジェクトは<a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>です。
+  このサイトに移動し、上部右のフォークボタンをクリックしてください。フォークのアニメーションが終了したら、あなたのアカウントにはコピーが作成されています。
+  右のサイドバーにあるあなたのフォークのHTTPのURLをコピーしてください。</p>
 
-<h2>Step: Clone Fork Locally</h2>
-<p>Now, in terminal, clone the repository onto your computer. It will create a new folder
-  for the repository so no need to create one. But make sure you aren't
-  cloning it inside of another Git repository folder! So, if you're still
-  inside of the 'hello-world' repository you worked in on the earlier challenges,
-  back out of that folder. You can leave the folder you're in (and be in the folder that it was inside of) by 'changing directory' with two dots:
+<h2>ステップ: フォークをローカルにクローン</h2>
+<p>それでは、ターミナルで、あなたのコンピューターにリポジトリをクローンしましょう。
+  新しいフォルダが作成されるので、自分で作成する必要はありません。
+  しかし、他のGitリポジトリのフォルダの中にクローンしないように気をつけてください。
+  そのため、もし、まだ前の課題で使用していた'hello-world'リポジトリの中にいるようであれば、そこから出てください。
+  'changing directory'と2つドットを打ち込むことで今いるフォルダから出る（そして、その外のフォルダに移動する）ことができます。:
 
 <p><code>$ cd ..</code></p>
 
-Now clone:
+それではクローンしましょう:
 
 <p><code>$ git clone &#60;URLFROMGITHUB&#62;</code></p>
 
-<p>Go into the folder for the fork it created (in this case, named 'patchwork')</p>
+<p>作成した、フォークのフォルダへ入りましょう（今回の場合は'patchwork'という名前です）。</p>
 <p><code>$ cd patchwork</code></p>
 
-<p>Now you've got a copy of the repository on your computer and it is
-  automatically connected to the remote repository (your forked copy)
-  on your GitHub account.</p>
+<p>コンピューター上にリポジトリのコピーが作成されました。
+  そして、そのコピーは自動的にあなたのGitHubアカウントのリモートリポジトリ（あなたがフォークしたコピー）に接続されています。</p>
 
-<h2>Step: Connect to the Original Repository</h2>
+<h2>ステップ: オリジナルのリポジトリに接続</h2>
 
-<p>But what if the original repository you forked from changes? You'll want
-  to be able to <strong>pull</strong> in those changes too. So let's add another remote
-  connection, this time to the original, <a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>, repository
-  with its URL, found on the right hand side of the original on GitHub.</p>
+<p>あなたがフォークしたオリジナルのリポジトリに変更が加えられた場合はどうなるのでしょうか？
+  その変更も同様に<strong>プル</strong>したいと考えると思います。
+  そのために、更にリモートリポジトリへの接続を追加しましょう。
+  今回はオリジナルの<a href="http://github.com/jlord/patchwork" target="_blank">github.com/jlord/patchwork</a>
+  リポジトリをURLから追加します。このURLはオリジナルのGitHubリポジトリの右側で確認できます。</p>
 
-<p>You can name this remote connection anything you want, but often
-  people use 'upstream', let's use that for this.</p>
+<p>リモートへの接続の名前は好きなように決めることができますが、大体は'upstream'が使われます。今回はこちらを使用しましょう。</p>
 
 <p><code>$ git remote add upstream https://github.com/jlord/patchwork.git</code></p>
 
@@ -61,9 +59,9 @@ Now clone:
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>Add remote connections</strong></li>
+    <li><strong>リモートに接続する</strong></li>
     <li><code>$ git remote add &#60;REMOTENAME&#62; &#60;URL&#62;</code></li>
-    <li><strong>View remote connections</strong></li>
+    <li><strong>リモートの接続を確認する</strong></li>
     <li><code>$ git remote -v</code></li>
   </ul>
 </div>
