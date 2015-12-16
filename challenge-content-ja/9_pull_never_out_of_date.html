@@ -1,39 +1,34 @@
 <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Keep your file up to date by pulling in changes from collaborators.</p>
+  <h2>今回の課題:</h2>
+  <p>コラボレーターが加えた変更をプルすることでファイルを最新に保ちましょう</p>
 </div>
 
-<h2>Pulling from a Remote</h2>
-<p>If you're working on something with someone you need to stay up
-  to date with the latest state. So you'll want to <strong>pull</strong> in any
-  changes that may have been made.</p>
+<h2>リモートからプルする</h2>
+<p>誰かと共同で何か作業を行う場合、コードを最新の状態に保つ必要があります。そのため、行われた変更を<strong>プル</strong>したいと思うでしょう。</p>
 
 <img src="../assets/imgs/pull.png" width="600">
 
-<h2>Step: What has Reporobot been up to?</h2>
-<p>See if Reporobot has made any changes to your 'add-' branch by pulling
-  in from the remote named 'origin' on GitHub:</p>
+<h2>ステップ: Reporobotは何をしたでしょうか？</h2>
+<p>Reporobotがあなたの'add-'ブランチに何か変更を加えたかどうか、GitHubの'origin'と呼ばれるリモートからプルすることで確認しましょう。:</p>
 
 <p><code>$ git pull &lt;REMOTENAME&gt; &lt;BRANCHNAME&gt;</code></p>
 
-<p>If nothing's changed, it will tell you 'Already up-to-date'.
-  If there are changes, it will merge those changes into your local
-  version.</p>
+<p>もし何も変更されていなければ、'Already up-to-date'と表示されます。
+  もし何か変更されていれば、あなたのローカルのバージョンにその変更がマージされます。</p>
 
-<p>Did Reporobot make changes? Git tells you where changes were made.
-  You can open that file and see Reporobot's updates. Surprise,
-  Reporobot is an artist!</p>
+<p>Reporobotは変更を加えていましたか？Gitはどこで変更が行われたか教えてくれます。あなたはそのファイルを開き、Reporobotが加えた更新を確認できます。
+  驚くべきことに、Reporobotは芸術家でした！</p>
 
 {{{verify_directory_button}}}
 
 <div id="git-tips">
   <h2>TIPS</h2>
     <ul>
-    <li><strong>Check Git status</strong></li>
+    <li><strong>Gitリポジトリのステータスを確認</strong></li>
     <code>$ git status</code>
-    <li><strong>Pull in changes from a remote branch</strong></li>
+    <li><strong>リモートブランチの変更をプル</strong></li>
     <code>$ git pull &lt;REMOTENAME&gt; &lt;REMOTEBRANCH&gt;</code>
-    <li><strong>See changes to the remote before you pull in</strong></li>
+    <li><strong>プルする前にリモートの変更を確認</strong></li>
     <code>$ git fetch --dry-run</code>
   </ul>
 </div>

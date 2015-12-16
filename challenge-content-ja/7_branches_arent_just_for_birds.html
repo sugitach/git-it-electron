@@ -1,101 +1,100 @@
 <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Create a new branch on your fork for your contribution.</p>
+  <h2>今回の課題:</h2>
+  <p>コントリビューションのために、フォークしたリポジトリに新しいブランチを作成しましょう。</p>
 </div>
 
-<h2>Branches</h2>
+<h2>ブランチ</h2>
 
-<p>Git repositories use branches to isolate work when needed. It's
-  common practice when working on a project or with others on a
-  project to create a <strong>branch</strong> to keep your changes in until they are ready. This
-  way you can do your work while the main, commonly named 'master',
-  branch stays stable. When your branch is ready, you merge it back into 'master'.</p>
+<p>Gitリポジトリは必要に応じて独立したブランチを使用できます。
+  プロジェクトの人数に関わらず、開発を行う際に、
+  修正が終わるまでその変更を保持するために<strong>ブランチ</strong>を作成するということがよく行われています。
+  この方法によって、多くの場合'master'と呼ばれるメインのブランチを変更することなく、
+  自分の作業を行うことができます。
+  作成した自分のブランチの修正が終わったら、'master'へマージしましょう。</p>
 
 <img src="../assets/imgs/branches.png" width="600">
 
 
-<p>For a great visualization on how branches work in a project, see this
-GitHub Guide: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
+<p>プロジェクトの中でどのようにブランチが動作するか視覚化した素晴らしいものがあります。
+  GitHubのガイドを参照してください。: <a href="http://guides.github.com/overviews/flow/" target="_blank">guides.github.com/overviews/flow</a></p>
 
 <h2>GitHub Pages</h2>
-<p>GitHub will automatically serve and host static website files in
-  branches named 'gh-pages'. Since the project you forked creates a
-  website, its main branch is 'gh-pages' instead of 'master'. All sites like this can be
-  found using this pattern for the URL: </p>
+<p>GitHubには'gh-pages'という名前のブランチにあるウェブサイト用の静的なファイルを自動的にホストする仕組みがあります。
+  あなたがフォークしたプロジェクトはウェブサイトを作成するプロジェクトですので、
+  そのメインブランチは'master'ではなく'gh-pages'になっています。
+  このようにして作成されたサイトは以下のようなパターンのURLを使用します。: </p>
 
 <code>http://githubusername.github.io/repositoryname</code>
 
-<h2>Step: Create a branch</h2>
-<p>When you create a branch, Git copies everything from the current
-  branch you're on and places it in the branch you've requested.</p>
+<h2>ステップ: ブランチの作成</h2>
+<p>ブランチを作成した時、Gitは現在のブランチから全てをコピーして、あなたが指定したブランチに配置します。</p>
 
-<p>Type <code>git status</code> to see what branch you're currently on (it
-  should be 'gh-pages').</p>
+<p>現在どのブランチにいるか確認するには<code>git status</code>と打ち込んでください（'gh-pages'にいると思います）。</p>
 
-<p>Create a branch and name it "add-&#60;username&#62;", where 'username' is
-  your username. For instance, "add-jlord". <strong>Branches are case-sensitive so name your branch exactly the way your GitHub name appears</strong>.</p>
+<p>"add-&#60;username&#62;"という名前でブランチを作成してください。'username'はあなたのユーザー名にしてください。
+  例えば、"add-jlord"のように。 <strong>ブランチ名は大文字と小文字を区別します。正確にGitHubのユーザー名をブランチ名に入れてください。</p>
 
 <p><code>$ git branch &#60;BRANCHNAME&#62;</code></p>
 
-<p>Now you have a branch with a new name identical to 'gh-pages'.</p>
+<p>新しい名前で、'gh-pages'と同一のブランチが作成されたかと思います。</p>
 
-<p>To go into that branch and work on it, similar to using <code>cd</code> to
-  change directory in terminal, you <strong>checkout</strong> a branch. Go onto your new branch:</p>
+<p>現在のブランチを変更して、そこで作業をするには、<code>cd</code>を使用するように、
+  ブランチを<strong>checkout</strong>してください。以下のコマンドで作成した新しいブランチへ移動してください。</p>
 
 <p><code>$ git checkout &#60;BRANCHNAME&#62;</code></p>
 
-<h2>Step: Create a new file</h2>
-<p>Back to the text editor:</p>
+<h2>ステップ: ファイルの新規作成</h2>
+<p>テキストエディタに戻ってください。</p>
   <ul>
-    <li>Create a new file named <span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>, where 'username' is your username. For instance, "add-jlord.txt".</li>
-    <li>Then, just write your
-  GitHub username in it, that's it and that's all. For instance,
-  I'd type 'jlord'.</li>
-    <li>Save this file in the 'contributors' folder in Patchwork: <strong>Patchwork/contributors/add-yourusername.txt</strong></li>
-    <li>Next, check in your changes!</li>
+    <li>'username'をあなたのユーザー名にして、<span style="white-space: nowrap;">"add-&#60;USERNAME&#62;.txt"</span>という名前の新しいファイルを作成してください。
+      例えば、"add-jlord.txt"のように。</li>
+    <li>それから、その中にGitHubのユーザー名のみを記述してください。例えば、私の場合は'jlord'を記述します。</li>
+    <li>このファイルをPatchworkの'contributors'フォルダの中に保存してください。<strong>Patchwork/contributors/add-yourusername.txt</strong></li>
+    <li>次にあなたが行った変更を反映させましょう！</li>
   </ul>
 
-<h2>Step: Check-in</h2>
-<p>Go through the steps for checking in a project: </p>
+<h2>ステップ: チェックイン</h2>
+<p>プロジェクトに変更を反映するための一連のステップを実行してください: </p>
 
 <p><code>$ git status</code></p>
 <p><code>$ git add &#60;FILENAME&#62;</code></p>
 <p><code>$ git commit -m "&#60;commit message&#62;"</code></p>
 
-<p>Now push your update to your fork on GitHub:</p>
+<p>それでは、あなたが行った更新をGitHub上のフォークにプッシュしましょう:</p>
 
 <p><code>$ git push origin &#60;BRANCHNAME&#62;</code></p>
 
 {{{verify_directory_button}}}
 
 <div class="didnt-pass">
-  <h2>Didn't Pass?</h2>
+  <h2>通らない？</h2>
 
   <h4>File NOT in contributors folder</h4>
-  <p>The file you create should inside the existing 'contributors' folder in the Patchwork repository. If you put it somewhere else, simply use Finder or Windows Explorer to move your file into the folder. You can check <code>git status</code> again and you'll find it sees your changes. Stage and then commit "all" (-A) of these changes (additions and deletions) with the commands below.</p>
+  <p>作成したファイルはPatchworkリポジトリの'contributors'フォルダにある必要があります。もし他の場所に置いてしまっていた場合、FinderやWindows Explorerを使用して'contributors'フォルダに移動してください。
+    再度<code>git status</code>を実行することであなたが加えた変更を確認することができます。以下のコマンドを使用して、"全ての"(-A)変更（追加や削除）を決定し、コミットしてください。</p>
   <p><code>$ git add -A</code></p>
   <p><code>$ git commit -m "move file into contributors folder"</code></p>
 
   <h4>Branch name expected: _____</h4>
-  <p>The branch name should match your user name exactly. To change your branch name:</p>
+  <p>ブランチ名はあなたのユーザー名と一致している必要があります。以下のコマンドでブランチ名を変更できます。:</p>
   <p><code>$ git branch -M &#60;NEWBRANCHNAME&#62;</code></p>
-  <p>When you've made your updates, verify again!</p>
+  <p>変更を加えたら、再度verifyしてみましょう！</p>
 </div>
 
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li>You can create and switch to a branch in one line:</li>
+    <li>以下の1行でブランチを作成し、そのブランチに移動できます:</li>
     <li><code>$ git checkout -b &#60;BRANCHNAME&#62;</code></li>
-    <li>Create a new branch:</li>
+    <li>新規ブランチの作成:</li>
     <li><code>$ git branch &#60;BRANCHNAME&#62;</code></li>
-    <li>Move onto a branch:</li>
+    <li>ブランチへの移動:</li>
     <li><code>$ git checkout &#60;BRANCHNAME&#62;</code></li>
-    <li>List the branches:</li>
+    <li>ブランチの一覧を表示:</li>
     <li><code>$ git branch</code></li>
-    <li>Rename a branch you're currently on:</li>
+    <li>現在のブランチをリネーム:</li>
     <li><code>$ git branch -m &#60;NEWBRANCHNAME&#62;</code></li>
-    <li>Verify what branch you're working on</li>
+    <li>作業しているブランチを確認</li>
     <li><code>$ git status</code></li>
   </ul>
 </div>
