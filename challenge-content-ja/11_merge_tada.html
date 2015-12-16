@@ -1,60 +1,53 @@
 <div id="challenge-desc" class="challenge">
-  <h2>The Challenge:</h2>
-  <p>Merge your branch locally, delete old branch and pull from upstream for much win!</p>
+  <h2>今回の課題:</h2>
+  <p>ブランチをローカルでマージし、古いブランチを削除し、アップストリームからプルしましょう！</p>
  </div>
 
-<h2>Step: Merge Locally</h2>
+<h2>ステップ: ローカルでのマージ</h2>
 
-<p>Your pull request has been merged! Now, since you
-  know that you definitely want those updates in your forked version,
-  and your branch is in good working order, merge it into the main
-  branch on your forked repository, in this case, 'gh-pages'.</p>
+<p>あなたのプルリクエストはマージされました！あなたが加えた変更をあなたがフォークしたバージョンにも反映させ、
+  ブランチが正常に動作するように、フォークしたリポジトリのメインブランチにマージしたいと考えるでしょう。今回の場合は、'gh-pages'です。</p>
 
-<p>First, move into the branch you want to merge <em>into</em> — in this case,
-  branch 'gh-pages'.</p>
+<p>はじめに、<em>マージされる側</em>のブランチに移動してください。今回の場合は、'gh-pages'です。</p>
 
 <p><code>$ git checkout gh-pages</code></p>
 
-<p>Now tell Git what branch you want to merge <em>in</em> — in this case,
-  your feature branch that begins with "add-".</p>
+<p>Gitに、<em>マージする側</em>のブランチを伝えましょう。今回の場合は、"add-"から始まるfeatureブランチです。</p>
 
 <p><code>$ git merge &#60;BRANCHNAME&#62;</code></p>
 
-<p>Tidy up by deleting your feature branch now that it has been merged.</p>
+<p>マージされたので、featureブランチを削除して整理しましょう。</p>
 <p><code>$ git branch -d &#60;BRANCHNAME&#62;</code></p>
 
-<p>You can also delete the branch from your fork on GitHub:</p>
+<p>GitHub上のフォークのブランチも削除できます:</p>
 <p><code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code></p>
 
-<h2>Step: Pull from Upstream</h2>
-<p>And last but not least, if you pull in updates from the original
-  (since it now shows you on the home page) you'll be up to date
-  and have a version too, live at: yourusername.github.io/patchwork.</p>
+<h2>ステップ: アップストリームからのプル</h2>
+<p>最後になりましたが、オリジナルから変更をプルしたとき、（すでにホームページであなたの名前が表示されているのですが、）
+  最新のバージョンを持った状態になります。右のURLで確認できます。: yourusername.github.io/patchwork.</p>
 
-<p>To pull from the original upstream:</p>
+<p>オリジナルのアップストリームからプルするには:</p>
 
 <p><code>$ git pull upstream gh-pages</code></p>
 
-<h2>Congratulations!</h2>
-<p>You've created local repositories, remote repositories, worked with
-  a collaborator, pushed, pulled and joined the millions of others
-  developing and enriching open source!</p>
-<p>Visit <a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a> to see your name incorporated!</p>
+<h2>おめでとうございます!</h2>
+<p>ローカルリポジトリや、リモートリポジトリを作成し、コラボレーターと共に作業を行い、プッシュし、プルし、他の数百万の開発者の仲間入りをし、オープンソースに貢献できました！</p>
+<p><a href="https://jlord.github.io/patchwork" target="_blank">jlord.github.io/patchwork</a>であなたの名前があることを確認してください！</p>
 
 {{{verify_directory_button}}}
 
 <div id="git-tips">
   <h2>Tips</h2>
   <ul>
-    <li><strong>Merge a branch into current branch</strong></li>
+    <li><strong>ブランチを現在のブランチにマージ</strong></li>
     <code>$ git merge &#60;BRANCHNAME&#62;</code>
-    <li><strong>Change the branch you're working on</strong></li>
+    <li><strong>作業ブランチの変更</strong></li>
     <code>$ git checkout &#60;BRANCHNAME&#62;</code>
-    <li><strong>Delete a local branch</strong></li>
+    <li><strong>ローカルブランチの削除</strong></li>
     <code>$ git branch -d &#60;BRANCHNAME&#62;</code>
-    <li><strong>Delete a remote branch</strong></li>
+    <li><strong>リモートブランチの削除</strong></li>
     <code>$ git push &#60;REMOTENAME&#62; --delete &#60;BRANCHNAME&#62;</code>
-    <li><strong>Pull from a remote branch</strong></li>
+    <li><strong>リモートブランチからプル</strong></li>
     <code>$ git pull &#60;REMOTENAME&#62; &#60;BRANCHNAME&#62;</code>
   </ul>
 </div>
